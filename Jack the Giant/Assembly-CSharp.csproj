@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\Background Scripts\BGScaler.cs" />
+     <Compile Include="Assets\Script\Background Scripts\Collectors\BGCollector.cs" />
+     <Compile Include="Assets\Script\Background Scripts\Collectors\BGSpawner.cs" />
      <Compile Include="Assets\Script\Camera Scripts\CameraScript.cs" />
      <Compile Include="Assets\Script\Cloud Collector Scripts\CloudCollector.cs" />
      <Compile Include="Assets\Script\Cloud Collector Scripts\CloudSpawner.cs" />

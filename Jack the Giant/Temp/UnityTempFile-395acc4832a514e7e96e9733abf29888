@@ -103,6 +103,8 @@
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
 'Assets/Script/Background Scripts/BGScaler.cs'
+'Assets/Script/Background Scripts/Collectors/BGCollector.cs'
+'Assets/Script/Background Scripts/Collectors/BGSpawner.cs'
 'Assets/Script/Camera Scripts/CameraScript.cs'
 'Assets/Script/Cloud Collector Scripts/CloudCollector.cs'
 'Assets/Script/Cloud Collector Scripts/CloudSpawner.cs'

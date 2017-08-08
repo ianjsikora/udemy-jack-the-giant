@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Cloud Collector Scripts/CloudSpawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Cloud Collector Scripts/CloudCollector.cs">
     <Files>
-      <File FileName="Assets/Script/Cloud Collector Scripts/CloudCollector.cs" Line="16" Column="3" />
-      <File FileName="Assets/Script/Cloud Collector Scripts/CloudSpawner.cs" Line="84" Column="35" />
+      <File FileName="Assets/Script/Camera Scripts/CameraScript.cs" Line="37" Column="4" />
+      <File FileName="Assets/Script/Cloud Collector Scripts/CloudCollector.cs" Line="18" Column="1" />
+      <File FileName="Assets/Script/Cloud Collector Scripts/CloudSpawner.cs" Line="109" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -147,6 +147,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1794824860651278, guid: 7638fe6ca0a2e4449b91228f621eda51, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7638fe6ca0a2e4449b91228f621eda51, type: 2}
   m_IsPrefabParent: 0
@@ -234,6 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 382056129}
   - component: {fileID: 382056131}
+  - component: {fileID: 382056132}
   - component: {fileID: 382056130}
   m_Layer: 0
   m_Name: Cloud Collector
@@ -275,10 +280,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.05}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -291,6 +296,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 0.1}
   m_EdgeRadius: 0
+--- !u!50 &382056132
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 382056128}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &449781456 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1439043554643652, guid: 6cbfc2c85c45444349aaec58d7afbe7d,
@@ -388,6 +413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 539802462}
   - component: {fileID: 539802464}
+  - component: {fileID: 539802465}
   - component: {fileID: 539802463}
   m_Layer: 0
   m_Name: Cloud Spawner
@@ -439,7 +465,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -455,6 +481,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 0.1}
   m_EdgeRadius: 0
+--- !u!50 &539802465
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 539802461}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &597895358
 Prefab:
   m_ObjectHideFlags: 0
@@ -497,6 +543,10 @@ Prefab:
     - target: {fileID: 1293650679767258, guid: e43fb2864ac4b4626bdaecd3b4c7f212, type: 2}
       propertyPath: m_Name
       value: Cloud_3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293650679767258, guid: e43fb2864ac4b4626bdaecd3b4c7f212, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e43fb2864ac4b4626bdaecd3b4c7f212, type: 2}
@@ -561,6 +611,15 @@ Prefab:
     - target: {fileID: 4864480612251426, guid: 47cd7b36c098049f48b30632b56baec7, type: 2}
       propertyPath: m_LocalScale.y
       value: 1.1278865
+      objectReference: {fileID: 0}
+    - target: {fileID: 60970770888829170, guid: 47cd7b36c098049f48b30632b56baec7,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851847675089686, guid: 47cd7b36c098049f48b30632b56baec7, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47cd7b36c098049f48b30632b56baec7, type: 2}
@@ -700,6 +759,24 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.1827343
       objectReference: {fileID: 0}
+    - target: {fileID: 1851847675089686, guid: 47cd7b36c098049f48b30632b56baec7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 60970770888829170, guid: 47cd7b36c098049f48b30632b56baec7,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 60970770888829170, guid: 47cd7b36c098049f48b30632b56baec7,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851847675089686, guid: 47cd7b36c098049f48b30632b56baec7, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47cd7b36c098049f48b30632b56baec7, type: 2}
   m_IsPrefabParent: 0
@@ -742,6 +819,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1439043554643652, guid: 6cbfc2c85c45444349aaec58d7afbe7d, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cbfc2c85c45444349aaec58d7afbe7d, type: 2}
   m_IsPrefabParent: 0
@@ -757,6 +838,7 @@ GameObject:
   - component: {fileID: 1842397653}
   - component: {fileID: 1842397652}
   - component: {fileID: 1842397651}
+  - component: {fileID: 1842397656}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -835,6 +917,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1842397656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1842397650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39622d9c1adb4e97b9886e12f5efa04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveCamera: 0
 --- !u!1 &1869818513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,6 +1173,10 @@ Prefab:
       propertyPath: m_Name
       value: Dark Cloud (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1794824860651278, guid: 7638fe6ca0a2e4449b91228f621eda51, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7638fe6ca0a2e4449b91228f621eda51, type: 2}
   m_IsPrefabParent: 0
@@ -1221,6 +1319,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.546519
       objectReference: {fileID: 0}
+    - target: {fileID: 1293650679767258, guid: e43fb2864ac4b4626bdaecd3b4c7f212, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e43fb2864ac4b4626bdaecd3b4c7f212, type: 2}
   m_IsPrefabParent: 0
@@ -1276,6 +1378,10 @@ Prefab:
     - target: {fileID: 1439043554643652, guid: 6cbfc2c85c45444349aaec58d7afbe7d, type: 2}
       propertyPath: m_Name
       value: Cloud_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439043554643652, guid: 6cbfc2c85c45444349aaec58d7afbe7d, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cbfc2c85c45444349aaec58d7afbe7d, type: 2}
