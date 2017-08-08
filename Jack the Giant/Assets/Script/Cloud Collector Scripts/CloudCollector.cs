@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CloudCollector : MonoBehaviour {
 
-	void OnTriggerEnter2D (Collider2D Target) {
+	void OnTriggerEnter2D (Collider2D target) {
 
-		if (Target.tag == "Cloud" || Target.tag == "Deadly") {
+		if (target.tag == "Cloud" || target.tag == "Deadly") {
 		
-			Target.gameObject.SetActive (false);
+			target.gameObject.SetActive (false);
 
 		}
 

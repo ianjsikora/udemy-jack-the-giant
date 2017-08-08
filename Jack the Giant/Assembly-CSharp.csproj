@@ -58,6 +58,7 @@
      <Compile Include="Assets\Script\Cloud Collector Scripts\CloudCollector.cs" />
      <Compile Include="Assets\Script\Cloud Collector Scripts\CloudSpawner.cs" />
      <Compile Include="Assets\Script\Player Scripts\Player.cs" />
+     <Compile Include="Assets\Script\Player Scripts\PlayerBounds.cs" />
      <None Include="Assets\Fonts\readme.txt" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
