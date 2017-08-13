@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 50041990736094040}
   - component: {fileID: 61289817995548324}
   - component: {fileID: 114684603619325256}
+  - component: {fileID: 114278534029885760}
+  - component: {fileID: 114968402955890776}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -106,6 +108,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114278534029885760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1552638944815368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36407662332154b86a709f0b9aee038d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114684603619325256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,6 +132,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   maxVelocity: 5
+--- !u!114 &114968402955890776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1552638944815368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b030e4f45e7d4fdb8748f66ab4e93cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinClip: {fileID: 8300000, guid: 5919df01a7aa44bedb08d0b5645ec1a4, type: 3}
+  lifeClip: {fileID: 8300000, guid: b774e0944375244738d06561a4e7c7fa, type: 3}
 --- !u!212 &212307940697499132
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -26,6 +26,12 @@ public class CloudSpawner : MonoBehaviour {
 		setMinAndMaxX ();
 		CreateClouds ();
 		player = GameObject.Find ("Player");
+
+		for (int i = 0; i < collectables.Length; i++) {
+			collectables [i].SetActive (false);
+		}
+
+
 	}
 
 	void Start (){
@@ -117,31 +123,50 @@ public class CloudSpawner : MonoBehaviour {
 				Shuffle (clouds);
 				Shuffle (collectables);
 
-				Vector3 temp = target.transform.position;
+				Vector3 tempCloudPosition = target.transform.position;
 
 				for (int i = 0; i < clouds.Length; i++) {
 				
 					if (!clouds[i].activeInHierarchy) {
 
 						if (controlX == 0) {
-							temp.x = Random.Range (0.0f, maxX);
+							tempCloudPosition.x = Random.Range (0.0f, maxX);
 							controlX = 1;
 						} else if (controlX == 1) {
-							temp.x = Random.Range (0.0f, minX);
+							tempCloudPosition.x = Random.Range (0.0f, minX);
 							controlX = 2;
 						} else if (controlX == 2) {
-							temp.x = Random.Range(1.0f, maxX);
+							tempCloudPosition.x = Random.Range(1.0f, maxX);
 							controlX = 3;
 						} else if (controlX == 3) {
-							temp.x = Random.Range(-1.0f, minX);
+							tempCloudPosition.x = Random.Range(-1.0f, minX);
 							controlX = 0;
 						}
 					
-						temp.y -= distanceBetweenClouds;
-						lastCloudPositionY = temp.y;
-						clouds[i].transform.position = temp;
+						tempCloudPosition.y -= distanceBetweenClouds;
+						lastCloudPositionY = tempCloudPosition.y;
+						clouds[i].transform.position = tempCloudPosition;
 						clouds[i].SetActive(true);
-					
+
+						int random = Random.Range (0, collectables.Length);
+						if (clouds [i].tag != "Deadly") {
+							if (!collectables [random].activeInHierarchy) {
+								Vector3 tempCollectablePosition = clouds [i].transform.position;
+								tempCollectablePosition.y += 0.7f;
+
+								if (collectables [random].tag == "Life") {
+									if (PlayerScore.lifeCount < 2) {
+										collectables [random].transform.position = tempCollectablePosition;
+										collectables [random].SetActive (true);
+									}	
+								} else {
+									collectables [random].transform.position = tempCollectablePosition;
+									collectables [random].SetActive (true);
+								}
+							
+							}
+						
+						}
 					}
 				
 				}
