@@ -58,10 +58,12 @@
      <Compile Include="Assets\Script\Cloud Collector Scripts\CloudCollector.cs" />
      <Compile Include="Assets\Script\Cloud Collector Scripts\CloudSpawner.cs" />
      <Compile Include="Assets\Script\Collectables Script\CollectableScript.cs" />
+     <Compile Include="Assets\Script\Game Controllers\GameManager.cs" />
      <Compile Include="Assets\Script\Game Controllers\GameplayController.cs" />
      <Compile Include="Assets\Script\Game Controllers\HighScoreController.cs" />
      <Compile Include="Assets\Script\Game Controllers\MainMenuController.cs" />
      <Compile Include="Assets\Script\Game Controllers\OptionsMenuController.cs" />
+     <Compile Include="Assets\Script\Game Preferences\GamePreferences.cs" />
      <Compile Include="Assets\Script\Player Scripts\Player.cs" />
      <Compile Include="Assets\Script\Player Scripts\PlayerBounds.cs" />
      <Compile Include="Assets\Script\Player Scripts\PlayerScore.cs" />

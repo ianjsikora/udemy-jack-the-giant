@@ -38,22 +38,6 @@ public class CloudSpawner : MonoBehaviour {
 		PositionThePlayer ();
 	}
 
-	void setMinAndMaxX () {
-		Vector3 bounds = Camera.main.ScreenToWorldPoint (new Vector3 (Screen.width, Screen.height, 0));
-		maxX = bounds.x - 0.5f;
-		minX = -bounds.x + 0.5f;
-	}
-
-	void Shuffle(GameObject[] arrayToShuffle) {
-
-		for(int i = 0; i < arrayToShuffle.Length; i++) {
-			GameObject temp = arrayToShuffle [i];
-			int random = Random.Range (i, arrayToShuffle.Length);
-			arrayToShuffle [i] = arrayToShuffle [random];
-			arrayToShuffle [random] = temp;
-		}
-	}
-
 	void CreateClouds () {
 
 		Shuffle (clouds);
@@ -83,6 +67,23 @@ public class CloudSpawner : MonoBehaviour {
 		}
 	}
 
+	void Shuffle(GameObject[] arrayToShuffle) {
+
+		for(int i = 0; i < arrayToShuffle.Length; i++) {
+			GameObject temp = arrayToShuffle [i];
+			int random = Random.Range (i, arrayToShuffle.Length);
+			arrayToShuffle [i] = arrayToShuffle [random];
+			arrayToShuffle [random] = temp;
+		}
+	}
+
+	void setMinAndMaxX () {
+		Vector3 bounds = Camera.main.ScreenToWorldPoint (new Vector3 (Screen.width, Screen.height, 0));
+		maxX = bounds.x - 0.5f;
+		minX = -bounds.x + 0.5f;
+	}
+
+
 	void PositionThePlayer () {
 		GameObject[] darkClouds = GameObject.FindGameObjectsWithTag ("Deadly");
 		GameObject[] cloudsInGame = GameObject.FindGameObjectsWithTag ("Cloud");
@@ -109,8 +110,7 @@ public class CloudSpawner : MonoBehaviour {
 			}
 		}
 
-		temp.y += 0.8f;
-		player.transform.position = temp;
+		player.transform.position = new Vector3 (temp.x, temp.y + 0.8f, temp.z);
 
 	}
 
@@ -120,10 +120,9 @@ public class CloudSpawner : MonoBehaviour {
 			
 			if (target.transform.position.y == lastCloudPositionY) {
 
+				Vector3 tempCloudPosition = target.transform.position;
 				Shuffle (clouds);
 				Shuffle (collectables);
-
-				Vector3 tempCloudPosition = target.transform.position;
 
 				for (int i = 0; i < clouds.Length; i++) {
 				
@@ -149,32 +148,32 @@ public class CloudSpawner : MonoBehaviour {
 						clouds[i].SetActive(true);
 
 						int random = Random.Range (0, collectables.Length);
-						if (clouds [i].tag != "Deadly") {
-							if (!collectables [random].activeInHierarchy) {
-								Vector3 tempCollectablePosition = clouds [i].transform.position;
-								tempCollectablePosition.y += 0.7f;
 
-								if (collectables [random].tag == "Life") {
-									if (PlayerScore.lifeCount < 2) {
-										collectables [random].transform.position = tempCollectablePosition;
-										collectables [random].SetActive (true);
-									}	
-								} else {
-									collectables [random].transform.position = tempCollectablePosition;
-									collectables [random].SetActive (true);
+						if(clouds[i].tag != "Deadly") {
+
+							if(!collectables[random].activeInHierarchy) {
+
+								if(collectables[random].tag == "Life") {
+
+									if(PlayerScore.lifeCount < 2) {
+										collectables[random].SetActive(true);
+										collectables[random].transform.position = new Vector3(clouds[i].transform.position.x,
+											clouds[i].transform.position.y + 0.7f,
+											clouds[i].transform.position.z);
+									}
 								}
-							
+								else {
+
+									collectables[random].SetActive(true);
+									collectables[random].transform.position = new Vector3(clouds[i].transform.position.x,
+										clouds[i].transform.position.y + 0.7f,
+										clouds[i].transform.position.z);
+								}
 							}
-						
 						}
 					}
-				
 				}
-					
 			}
-
 		}
-			
 	}
-
 }

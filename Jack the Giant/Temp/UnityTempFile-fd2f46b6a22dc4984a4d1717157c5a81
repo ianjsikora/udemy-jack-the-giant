@@ -109,6 +109,7 @@
 'Assets/Script/Cloud Collector Scripts/CloudCollector.cs'
 'Assets/Script/Cloud Collector Scripts/CloudSpawner.cs'
 'Assets/Script/Collectables Script/CollectableScript.cs'
+'Assets/Script/Game Controllers/GameManager2.cs'
 'Assets/Script/Game Controllers/GameplayController.cs'
 'Assets/Script/Game Controllers/HighScoreController.cs'
 'Assets/Script/Game Controllers/MainMenuController.cs'
